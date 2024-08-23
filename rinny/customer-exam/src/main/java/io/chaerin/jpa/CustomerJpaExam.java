@@ -13,9 +13,9 @@ public class CustomerJpaExam {
         EntityTransaction tx = em.getTransaction();
 
         tx.begin();
-
         //data 관련 처리
         em.persist(Customer.sample());
+        //
         tx.commit(); //잘못된 경우엔 tx.rollback();
         em.close();
         emf.close();
