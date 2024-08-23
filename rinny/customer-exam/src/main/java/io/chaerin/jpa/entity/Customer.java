@@ -3,7 +3,15 @@ package io.chaerin.jpa.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@NoArgsConstructor
+@ToString
+@Setter
+@Getter
 @Entity
 @Table(name = "customer_tb")
 public class Customer {
@@ -16,10 +24,6 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.registerDate = System.currentTimeMillis();
-    }
-
-    public Customer() {
-
     }
 
     public static Customer sample(){
